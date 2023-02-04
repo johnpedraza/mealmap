@@ -50,10 +50,14 @@ function FoodDetails (props) {
         <div>
             <h1>{loadedFood.title}</h1>
             <img src={loadedFood.image} />
-            <h2>Food is at {loadedFood.location}</h2>
             <p>{loadedFood.description}</p>
+            <h2>Food is at {loadedFood.location}</h2>
+            <h2>First, navigate to the building marked on the map below.</h2>
+            <LineDrawer location={loadedFood}/>
+            <h2>Then scan this QR code to enter the Augmented Reality Scene</h2>
             <QRCodeGenerator destination={destination}/>
-            <LineDrawer />
+            <h2>Finally, localize yourself by pointing your camera toward the AprilTag near the entrance. They look something like this:</h2>
+            <img src="//cdn.shopify.com/s/files/1/0803/9211/files/tag36h10_0_large.png?v=1487041161" width='150' alt="AprilTag"/>
         </div>
     )
 }

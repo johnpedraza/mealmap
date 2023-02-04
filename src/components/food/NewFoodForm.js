@@ -35,7 +35,7 @@ function NewFoodForm (props) {
                 </div>
                 <div className={classes.control}>
                     <label htmlFor="image">Food Image</label>
-                    <input type="file" required id="image" ref={imageInputRef}/>
+                    <input type="url" required id="image" ref={imageInputRef}/>
                 </div>
                 <div className={classes.control}>
                     <label htmlFor="location">Food Location</label>
