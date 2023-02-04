@@ -1,33 +1,47 @@
+import { useState, useEffect } from "react";
+
 import FoodList from "../components/food/FoodList";
 
-const DUMMY_DATA = [
-    {
-      id: 'm1',
-      title: 'This is a first meetup',
-      image:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg',
-      address: 'Meetupstreet 5, 12345 Meetup City',
-      description:
-        'This is a first, amazing meetup which you definitely should not miss. It will be a lot of fun!',
-    },
-    {
-      id: 'm2',
-      title: 'This is a second meetup',
-      image:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg',
-      address: 'Meetupstreet 5, 12345 Meetup City',
-      description:
-        'This is a first, amazing meetup which you definitely should not miss. It will be a lot of fun!',
-    },
-  ];
-
 function AllFoodPage () {
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadedFood, setLoadedFood] = useState([]);
+
+  useEffect(() => {
+    setIsLoading(true);
+    fetch(
+      "https://mealmap-f3485-default-rtdb.firebaseio.com/food.json"
+    ).then(response => {
+      return response.json();
+    }).then(data => {
+      const food = [];
+      
+      for (const key in data) {
+        const food_singular = {
+          id: key,
+          ...data[key]
+        }
+        food.push(food_singular); 
+      }
+
+      setIsLoading(false);
+      setLoadedFood(food);
+    })
+  }, [])
+
+  if (isLoading) {
     return (
-        <section>
-            <h1>All Food</h1>
-            <FoodList food={DUMMY_DATA} />
-        </section>
+      <section>
+        <p>Loading...</p>
+      </section>
     )
+  }
+
+  return (
+      <section>
+          <h1>All Food</h1>
+          <FoodList food={loadedFood} />
+      </section>
+  )
 }
 
 export default AllFoodPage
