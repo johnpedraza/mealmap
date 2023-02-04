@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import { useState } from "react";
 import { useEffect } from "react";
+import LineDrawer from "../canvas/LineDrawer";
 
 function FoodDetails () {
     const params = useParams()
@@ -37,12 +38,13 @@ function FoodDetails () {
     }
 
     return (
-        <section>
+        <div>
             <h1>{loadedFood.title}</h1>
             <img src={loadedFood.image} />
             <h2>Food is at {loadedFood.location}</h2>
             <p>{loadedFood.description}</p>
-        </section>
+            <LineDrawer />
+        </div>
     )
 }
 
