@@ -3,7 +3,7 @@ import { useRef } from "react";
 import Card from "../ui/Card"
 import classes from "./NewFoodForm.module.css"
 
-function NewFoodForm () {
+function NewFoodForm (props) {
     const titleInputRef = useRef();
     const imageInputRef = useRef();
     const addressInputRef = useRef();
@@ -23,7 +23,7 @@ function NewFoodForm () {
             description: enteredDescription,
         }
 
-        console.log(foodData)
+        props.onAddFood(foodData);
     }  
     
     return (
