@@ -25,6 +25,9 @@ function MainNavigation () {
                             <span className={classes.badge}>{favoritesCtx.totalFavorites}</span>
                         </Link>
                     </li>
+                    <li>
+                        <Link to='/deliveries'> Deliveries</Link>
+                    </li>
                 </ul>
             </nav>
         </header>   

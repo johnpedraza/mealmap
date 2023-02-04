@@ -26,7 +26,7 @@ function FoodItem (props) {
     }
 
     function removeFoodHandler() {
-        fetch("https://mealmap-f3485-default-rtdb.firebaseio.com/food/" + props.id + ".json",
+        fetch("https://mealmap-f3485-default-rtdb.firebaseio.com/delivery/" + props.id + ".json",
         {
             method: "DELETE",
             headers: {
@@ -39,13 +39,9 @@ function FoodItem (props) {
         })
     }
 
-    function gotoFoodHandler() {
-        navigate("/food/" + props.id, { replace: true })
-    }
-
-    function orderDeliveryHandler() {
-        navigate("/new-delivery/", {replace: true})
-    }
+    // function gotoDeliveryHandler() {
+    //     navigate("/delivery/" + props.id, { replace: true })
+    // }
     
     return (
         <li className={classes.item}>
@@ -58,17 +54,14 @@ function FoodItem (props) {
                     <address>{props.location}</address>
                     <p>{props.description}</p>
                 </div>
-                <div className={classes.actions}>
-                    <button onClick={gotoFoodHandler}>Go to Food</button>
-                </div>
-                <div className={classes.actions}>
-                    <button onClick={orderDeliveryHandler}>Order Delivery!</button>
-                </div>
+                {/* <div className={classes.actions}>
+                    <button onClick={gotoDeliveryHandler}>View Delivery</button>
+                </div> */}
                 <div className={classes.actions}>
                     <button onClick={toggleFavoriteStatusHandler}>{itemIsFavorite ? "Remove from Favorites" : "Add to Favorites"}</button>
                 </div>
                 <div className={classes.actions}>
-                    <button onClick={removeFoodHandler}>Remove Food</button>
+                    <button onClick={removeFoodHandler}>Cancel Delivery</button>
                 </div>
             </Card>
         </li>
