@@ -27,14 +27,24 @@ const LineDrawer = (props) => {
       context.fillRect(0, 400, 5, 5);
       context.fillRect(0, 500, 5, 5);
       
-      console.log(props.location.location) // ???
-      if (props.location.location == "desk 1") {
+      const location_string = props.location.location
+      const building = location_string.split(' ')[0]
+      if (building == "CIC") {
         context.fillStyle = "black"
         context.fillRect(71, 146, 20, 20);
         context.fillStyle = "magenta"
         context.fillRect(75, 150, 12, 12);
+      } else if (building == "UC") {
+        context.fillStyle = "black"
+        context.fillRect(346, 206, 20, 20);
+        context.fillStyle = "magenta"
+        context.fillRect(350, 210, 12, 12);
+      } else if (building == "DH") {
+        context.fillStyle = "black"
+        context.fillRect(190, 277, 20, 20);
+        context.fillStyle = "magenta"
+        context.fillRect(194, 281, 12, 12);
       }
-      
 
       //context.clearRect(45, 45, 60, 60);
       //context.strokeRect(50, 50, 50, 50);
