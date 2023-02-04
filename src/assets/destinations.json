@@ -3,9 +3,13 @@
         ["desk 1", 
          "CIC 2300 desk 4",
          "dummy destination",
-         "UC Rangos Stage"]},
+         "UC Rangos Stage",
+         "GHC 4401",
+         "UC PWM"]},
 
     {"desk 1" : "https://arenaxr.org/jpedraza/wiselab_th23_desk1",
      "CIC 2300 desk 4" : "https://arenaxr.org/jpedraza/wiselab_th23_desk1",
-     "UC Rangos Stage" : "https://arenaxr.org/jpedraza/uc_rangos_stage"}
+     "UC Rangos Stage" : "https://arenaxr.org/jpedraza/uc_rangos_stage",
+     "GHC 4401": "https://arenaxr.org/jpedraza/ghc_4401",
+     "UC PWM": "https://arenaxr.org/jpedraza/uc_pwm"}
 ]

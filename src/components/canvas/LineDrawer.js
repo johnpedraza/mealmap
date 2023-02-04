@@ -44,6 +44,11 @@ const LineDrawer = (props) => {
         context.fillRect(190, 277, 20, 20);
         context.fillStyle = "magenta"
         context.fillRect(194, 281, 12, 12);
+      } else if (building == "GHC") {
+        context.fillStyle = "black"
+        context.fillRect(196, 196, 20, 20);
+        context.fillStyle = "magenta"
+        context.fillRect(200, 200, 12, 12);
       }
 
       //context.clearRect(45, 45, 60, 60);
