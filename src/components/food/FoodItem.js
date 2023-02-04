@@ -38,6 +38,10 @@ function FoodItem (props) {
             console.log('DELETED')
         })
     }
+
+    function gotoFoodHandler() {
+        navigate("/food/" + props.id, { replace: true })
+    }
     
     return (
         <li className={classes.item}>
@@ -49,6 +53,9 @@ function FoodItem (props) {
                     <h3>{props.title}</h3>
                     <address>{props.location}</address>
                     <p>{props.description}</p>
+                </div>
+                <div className={classes.actions}>
+                    <button onClick={gotoFoodHandler}>Go to Food</button>
                 </div>
                 <div className={classes.actions}>
                     <button onClick={toggleFavoriteStatusHandler}>{itemIsFavorite ? "Remove from Favorites" : "Add to Favorites"}</button>
