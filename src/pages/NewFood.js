@@ -1,5 +1,12 @@
+import NewFoodForm from "../components/food/NewFoodForm"
+
 function NewFoodPage () {
-    return <div>New Food Page</div>
+    return (
+        <section>
+            <div>Add New Food</div>
+            <NewFoodForm />
+        </section>
+    )
 }
 
 export default NewFoodPage
