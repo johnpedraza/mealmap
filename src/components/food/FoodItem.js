@@ -61,7 +61,7 @@ function FoodItem (props) {
                     <button onClick={toggleFavoriteStatusHandler}>{itemIsFavorite ? "Remove from Favorites" : "Add to Favorites"}</button>
                 </div>
                 <div className={classes.actions}>
-                    <button onClick={removeFoodHandler}>Remove Food!!!!!!!!!</button>
+                    <button onClick={removeFoodHandler}>Remove Food!!!</button>
                 </div>
             </Card>
         </li>
