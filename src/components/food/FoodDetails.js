@@ -2,8 +2,9 @@ import { useParams } from "react-router-dom"
 import { useState } from "react";
 import { useEffect } from "react";
 import LineDrawer from "../canvas/LineDrawer";
+import QRCodeGenerator from "../canvas/QRCodeGenerator";
 
-function FoodDetails () {
+function FoodDetails (props) {
     const params = useParams()
     const foodId = params.foodId
 
@@ -37,12 +38,21 @@ function FoodDetails () {
         )
     }
 
+    let destination = ""
+    let destinations = require("../../assets/destinations.json")
+    if (destinations[0].dests.includes(loadedFood.location)) {
+        destination = destinations[1][loadedFood.location]
+    } else {
+        destination = "www.tartanhacks.com"
+    }
+
     return (
         <div>
             <h1>{loadedFood.title}</h1>
             <img src={loadedFood.image} />
             <h2>Food is at {loadedFood.location}</h2>
             <p>{loadedFood.description}</p>
+            <QRCodeGenerator destination={destination}/>
             <LineDrawer />
         </div>
     )

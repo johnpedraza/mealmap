@@ -1,0 +1,9 @@
+[
+    {"dests" : 
+        ["desk 1", 
+         "CIC 2300",
+         "dummy destination"]},
+
+    {"desk 1" : "https://arenaxr.org/jpedraza/wiselab_th23",
+     "CIC 2300" : "https://arenaxr.org/jpedraza/wiselab_th23"}
+]
