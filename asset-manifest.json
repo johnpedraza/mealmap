@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/mealmap/static/css/main.ba096f66.css",
-    "main.js": "/mealmap/static/js/main.36dd8718.js",
+    "main.js": "/mealmap/static/js/main.af046763.js",
+    "static/media/cmu_map_th23.png": "/mealmap/static/media/cmu_map_th23.d8acc6348360e46b1087.png",
     "index.html": "/mealmap/index.html",
     "main.ba096f66.css.map": "/mealmap/static/css/main.ba096f66.css.map",
-    "main.36dd8718.js.map": "/mealmap/static/js/main.36dd8718.js.map"
+    "main.af046763.js.map": "/mealmap/static/js/main.af046763.js.map"
   },
   "entrypoints": [
     "static/css/main.ba096f66.css",
-    "static/js/main.36dd8718.js"
+    "static/js/main.af046763.js"
   ]
 }
