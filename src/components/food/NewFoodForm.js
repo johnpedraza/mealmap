@@ -35,10 +35,10 @@ function NewFoodForm (props) {
                 </div>
                 <div className={classes.control}>
                     <label htmlFor="image">Food Image</label>
-                    <input type="url" required id="image" ref={imageInputRef}/>
+                    <input type="file" required id="image" ref={imageInputRef}/>
                 </div>
                 <div className={classes.control}>
-                    <label htmlFor="address">Food Location</label>
+                    <label htmlFor="location">Food Location</label>
                     <input type="text" required id="location" ref={locationInputRef}/>
                 </div>
                 <div className={classes.control}>
