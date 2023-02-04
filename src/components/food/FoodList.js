@@ -10,7 +10,7 @@ function FoodList (props) {
                     id={food.id} 
                     image={food.image}
                     title={food.title}
-                    address={food.address}
+                    location={food.location}
                     description={food.description} 
                 />
             )}

@@ -20,7 +20,7 @@ function FoodItem (props) {
                 title: props.title,
                 escription: props.description,
                 image: props.image,
-                address: props.address
+                location: props.location
             })
         }
     }
@@ -47,7 +47,7 @@ function FoodItem (props) {
                 </div>
                 <div className={classes.content}>
                     <h3>{props.title}</h3>
-                    <address>{props.address}</address>
+                    <address>{props.location}</address>
                     <p>{props.description}</p>
                 </div>
                 <div className={classes.actions}>
