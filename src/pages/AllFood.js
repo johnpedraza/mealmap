@@ -1,3 +1,5 @@
+import FoodList from "../components/food/FoodList";
+
 const DUMMY_DATA = [
     {
       id: 'm1',
@@ -23,11 +25,7 @@ function AllFoodPage () {
     return (
         <section>
             <h1>All Food</h1>
-            <ul>
-                {DUMMY_DATA.map((meetup) => {
-                    return <li key={meetup.id}>{meetup.title}</li>
-                })}
-            </ul>
+            <FoodList food={DUMMY_DATA} />
         </section>
     )
 }
