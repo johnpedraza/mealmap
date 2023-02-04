@@ -33,7 +33,7 @@ function FoodItem (props) {
                 "Content-Type": "application/json"
             }
         }).then(() => {
-            navigate("/", { replace: true });
+            navigate("/mealmap", { replace: true });
             window.location.reload()
             console.log('DELETED')
         })

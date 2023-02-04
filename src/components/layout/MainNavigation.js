@@ -14,7 +14,7 @@ function MainNavigation () {
             <nav>
                 <ul>
                     <li>
-                        <Link to='/'>All Food</Link>
+                        <Link to='/mealmap'>All Food</Link>
                     </li>
                     <li>
                         <Link to='/new-food'>Add New Food</Link>

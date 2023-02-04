@@ -11,6 +11,7 @@ function App() {
     <Layout>
       <Routes>
         <Route path="/" element={<AllFoodPage />} />
+        <Route path="/mealmap" element={<AllFoodPage />} />
         <Route path="/food/:foodId" element={<FoodDetails />} />
         <Route path="/new-food" element={<NewFoodPage />} />
         <Route path="/favorites" element={<FavoritesPage />} />
